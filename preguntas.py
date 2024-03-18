@@ -175,7 +175,6 @@ def pregunta_09():
 
 
 
-
 def pregunta_10():
     """
     Construya una tabla que contenga _c1 y una lista separada por ':' de los valores de
@@ -197,11 +196,11 @@ def pregunta_10():
         cadena = ""
         for valor in sorted(letra):
             cadena += f"{valor}:"
-        lista.append(cadena)  # Agregar la cadena al final de la lista
+        
+        lista.append(cadena[:-1])  
 
     tabla = pd.DataFrame({'_c2': lista}, index=pd.Series(['A', 'B', 'C', 'D', 'E'], name='_c1'))
     return tabla
-
 
 
 def pregunta_11():
@@ -235,7 +234,6 @@ def pregunta_11():
     tabla = pd.DataFrame({"_c0": c0, "_c4": c4})
 
     return tabla
-
 
 
 def pregunta_12():
